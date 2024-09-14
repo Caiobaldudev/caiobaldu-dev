@@ -15,7 +15,7 @@ main {
 .main_content img {
   width: 24rem;
   height: 24rem;
-  margin-bottom: 4rem;
+  margin: 0rem 0 2rem 0;
 }
 
 .main_content h2 {
