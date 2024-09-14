@@ -1,0 +1,147 @@
+main {
+  height: 100vh;
+  background: url(../img/Background_Intro.png) no-repeat center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.main_content {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.main_content img {
+  border-radius: 50%;
+  border: solid #64e364;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 4rem;
+}
+
+.main_content::before {
+  content: '';
+  display: block;
+  background-image: url('../img/vector.png');
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  width: 6rem; 
+  height: 6rem; 
+  position: absolute;
+  top: 15rem; 
+  right: 26rem; 
+}
+
+.main_content h2 {
+  font-family: var(--f-subitle);
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.main_content h2 span {
+  color: #64e364;
+}
+.main_content h1 {
+  font-family: var(--f-title);
+  font-size: 5.6rem;
+  margin-bottom: 2rem;
+}
+
+.main_content p {
+  font-family: var(--f-text);
+  font-size: 1.4rem;
+  margin-bottom: 8rem;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+.tags_list {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.tags_list img {
+  margin: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+}
+
+.tags_list li {
+  background-color: var(--gray-300);
+  display: flex;
+  gap: 0.3rem;
+
+  font-family: var(--f-text);
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 99.9rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 2rem;
+    background-position: 0;
+    background-size: cover;
+  }
+
+  .main_content::before {
+    width: 5rem; 
+    height: 5rem; 
+    position: absolute;
+    top: 8rem; 
+    right: 28rem; 
+  }
+
+  .main_content img {
+    width: 11rem;
+    height: 11rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .main_content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .main_content h1 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .main_content p {
+    font-size: 1.4rem;
+    color: var(--gray-500);
+    margin-bottom: 4rem;
+  }
+
+  .tags_list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .tags_list img {
+    margin: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .tags_list li {
+    align-items: center;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .main_content::before {
+    width: 5rem; 
+    height: 5rem; 
+    position: absolute;
+    top: 8rem; 
+    right: 14rem; 
+  }
+}

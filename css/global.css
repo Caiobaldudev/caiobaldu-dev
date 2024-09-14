@@ -34,7 +34,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--gray-300);
+  background-color: var(--gray-200);
   color: var(--gray-600);
   font-family: var(--f-text);
   line-height: 1.6;
