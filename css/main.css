@@ -67,16 +67,16 @@ main {
 }
 
 .tags_list li:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 2px 3px var(--gray-400); 
+  transform: translateY(-5px);
+  box-shadow: 0 2px 3px var(--gray-400);
 }
 
 .github-link {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
   display: flex;
   gap: 0.3rem;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .tags_list li[title] {
@@ -103,6 +103,28 @@ main {
 .tags_list li:hover::after {
   opacity: 1;
   visibility: visible;
+}
+
+.animated-arrow {
+  width: 3rem;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
 }
 
 @media (max-width: 768px) {
