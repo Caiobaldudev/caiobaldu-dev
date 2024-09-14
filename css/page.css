@@ -57,12 +57,52 @@ main {
 .tags_list li {
   background-color: var(--gray-300);
   display: flex;
+  align-items: center;
   gap: 0.3rem;
-
   font-family: var(--f-text);
   font-size: 1.6rem;
   padding: 0.8rem 1.6rem;
   border-radius: 99.9rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tags_list li:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 2px 3px var(--gray-400); 
+}
+
+.github-link {
+  text-decoration: none;
+  color: inherit; 
+  display: flex;
+  gap: 0.3rem;
+  cursor: pointer; 
+}
+
+.tags_list li[title] {
+  position: relative;
+}
+
+.tags_list li[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gray-100);
+  color: #4eb34e;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tags_list li:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 768px) {
