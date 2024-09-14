@@ -1,0 +1,87 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables */
+:root {
+  font-size: 62.5%;
+  /* Background */
+  --gray-300: #292c34;
+  /* Colors */
+  --gray-100: #0d0e11;
+  --gray-200: #16181d;
+  --gray-400: #878ea1;
+  --gray-500: #c0c4ce;
+  --gray-600: #e2e4e9;
+  /* Fonts */
+  --f-title: "Asap", system-ui;
+  --f-subitle: "Inconsolata", system-ui;
+  --f-text: "Maven Pro", sans-serif;
+}
+
+/* Base body styles */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--gray-300);
+  color: var(--gray-600);
+  font-family: var(--f-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Lists */
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Inputs */
+input, textarea, select {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--f-title);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Links hover effect */
+a:hover {
+  opacity: 0.8;
+}
