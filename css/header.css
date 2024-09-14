@@ -3,54 +3,61 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
-.nav-header {
+.menu {
   position: relative;
-  max-width: 100%;
   background-color: var(--gray-300);
   padding: 0.8rem;
   border-radius: 5rem;
   display: flex;
   align-items: center;
-  gap: 20rem;
-  justify-content: space-between;
+  gap: 10rem;
 }
 
-.nav-header img {
+.menu img {
   width: 3.6rem;
 }
 
-.nav-header ul {
+.menu ul {
   font-family: var(--f-subtitle);
   display: flex;
-  align-items: center;
-  gap: 2rem;
-  font-size: 1.6rem;
-  padding-right: 1rem;
+  flex-wrap: wrap;
 }
 
-.nav-header li {
+.menu ul li a {
+  display: block;
+  padding: 1rem;
+  margin-right: 10px;
+  color: var(--gray-600);
+  text-decoration: none;
+  font-family: var(--f-subtitle);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+}
+
+.menu li {
   position: relative;
   padding: 0rem 0;
 }
 
-.nav-header li::after {
+.menu li::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1.5px;
+  height: 1px;
   background-color: var(--gray-600);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
 
-.nav-header li:hover::after {
-  transform: scaleX(1);
+.menu li:hover::after {
+  transform: scaleX(0.85);
   transform-origin: bottom left;
 }
 
@@ -81,18 +88,28 @@ header {
     width: 12px;
     background: #fff;
     box-shadow: 0 4px #fff, 0 -4px #fff;
+    transition: transform 0.3s;
   }
 
-  [data-menu="list"] {
-    display: flex;
-    flex-direction: column;
+  [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
+  nav.menu ul[data-menu="list"] {
+    display: none;
     position: absolute;
     background-color: var(--gray-300);
+    border-radius: .4rem;
     z-index: 200;
     width: 16rem;
     top: 0;
     right: 0;
     padding: 60px 0 20px 0;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  nav.menu ul[data-menu="list"].active {
+    display: block;
+    animation: show-down .5s forwards;
   }
 }
