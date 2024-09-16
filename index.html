@@ -10,13 +10,19 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Caio Balduino | Dev</title>
   </head>
   <body>
     <header>
       <nav class="menu" data-menu="suave">
-        <img src="./img/logo.svg" alt="CB">
-        <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+        <img src="./img/logo.svg" alt="CB" />
+        <button data-menu="button" aria-expanded="false" aria-controls="menu">
+          Menu
+        </button>
         <ul id="menu" data-menu="list">
           <li><a href="#">Projetos</a></li>
           <li><a href="#">Serviços</a></li>
@@ -63,17 +69,19 @@
         />
       </a>
     </main>
-    <!-- <section class="projects">
-      <h2>Meus projetos</h2>
-      <h1>Veja os projetos em destaque</h1>
-      <div class="cards-wrapper">
-        <div class="card-component-wrap">
-          <div class="card-component">
-
-          </div>
-        </div>
+    <section class="projects" id="projects">
+      <div class="projects-headers">
+        <h2>Meus projetos</h2>
+        <h1>Veja os projetos em destaque</h1>
       </div>
-    </section> -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/script.js"></script>
   </body>
 </html>
