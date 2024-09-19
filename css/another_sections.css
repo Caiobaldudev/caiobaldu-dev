@@ -80,7 +80,6 @@
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: var(--gray-400);
-
 }
 
 .solutions p {
@@ -88,4 +87,25 @@
   color: #e4e4e4;
   max-width: 600px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 3rem 2rem;
+  }
+
+  .wrap_services {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    gap: 1rem;
+  }
+
+  .block {
+    padding: 3rem;
+  }
+
+  .block h3 {
+    font-size: 2.2rem;
+  }
 }
