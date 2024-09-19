@@ -1,0 +1,91 @@
+.services {
+  width: 100%;
+  background-color: var(--gray-300);
+  padding: 8.8rem 10rem 12rem 10rem;
+}
+
+.wrap_services {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Blocos Individuais */
+.block {
+  background-color: var(--gray-200);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-height: 300px;
+}
+
+.block h3 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  color: var(--gray-400);
+}
+
+.block p,
+.block ul {
+  font-size: 1.6rem;
+  color: var(--gray-500);
+}
+
+/* Bloco de Formação */
+.education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Bloco de Experiências */
+.experiences ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experiences ul li {
+  margin-bottom: 2rem;
+}
+
+.experiences ul li h4 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--gray-400);
+}
+
+.experiences ul li p {
+  margin: 0.5rem 0 0 0;
+  color: var(--gray-600);
+  font-size: 1.2rem;
+}
+
+/* Bloco de Serviços */
+.solutions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.solutions h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #64e364;
+}
+
+.solutions h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--gray-400);
+
+}
+
+.solutions p {
+  font-size: 1.5rem;
+  color: #e4e4e4;
+  max-width: 600px;
+  margin: 0 auto;
+}
